@@ -1,17 +1,55 @@
 ---
-import Hero from '@/components/jeff/hero.svelte'
+import Hero from '@/components/jeff/Hero.svelte'
+import SectionValue from '@/components/jeff/SectionValue.svelte'
 import Layout from '@/layouts/Layout.astro'
 ---
 
-<style lang="scss"></style>
+<style lang="scss">
+  .my-results {
+    position: relative;
+    z-index: -1;
+  }
+  :global(h2) {
+    font-size: 80px;
+    background: linear-gradient(to bottom right, #00bbb8 0%, #69bb2d 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .coffe {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-weight: bold;
+    font-size: 25px;
+  }
+</style>
 
 <Layout title="Crypto Code Jeff">
   <Hero client:load />
 
-  <div style="height: 200vh"></div>
-  <script>
-    import { animReveal } from '@/utils/reveal'
+  <div class="my-results g-wrapper">
+    <h2 style="transform: translateY(-95px);">My results</h2>
+  </div>
 
-    window.onload = () => animReveal()
-  </script>
+  <SectionValue />
+
+  <div class="my-results g-wrapper">
+    <h2>Let's talk</h2>
+  </div>
+
+  <div class="my-results g-wrapper">
+    <h2>Memes</h2>
+  </div>
+
+  <div class="my-results g-wrapper">
+    <h2>Buy a coffee for Jeff</h2>
+
+    <div class="coffe">
+      <img src="/assets/jeff/jeffcoffe.png" alt="" />
+      <p class="address g-text">iRavSWuUFJmg9vW2xjFiNVJuezoCeFdMP4p6s3xhjpd</p>
+      <img src="/assets/solana.png" width="150px" height="150px" alt="" />
+    </div>
+  </div>
 </Layout>

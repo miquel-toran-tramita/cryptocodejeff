@@ -9,7 +9,7 @@
 
       const newPosition = Math.floor(window.scrollY / 100)
 
-      if (newPosition < 6) jeffPosition = newPosition
+      if (newPosition < 7) jeffPosition = newPosition
     })
   })
 </script>
@@ -17,12 +17,17 @@
 <style lang="scss">
   .hero {
     display: flex;
-    gap: 100px;
-    padding: 50px 0;
+    gap: 150px;
+    padding-top: 100px;
 
     img {
       position: sticky;
       top: 50px;
+      margin-left: 20px;
+    }
+
+    .text {
+      padding-bottom: 200px;
     }
 
     .block {
@@ -33,12 +38,6 @@
       font-size: 40px;
       font-weight: bold;
     }
-
-    span {
-      background: linear-gradient(to bottom right, #00bbb8 0%, #69bb2d 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
   }
 </style>
 
@@ -48,7 +47,7 @@
   <div class="text">
     <div class="block">
       <p style="font-size: 80px" reveal>
-        Hi! I'm <span>Jeff</span>,
+        Hi! I'm <span class="g-text">Jeff</span>,
       </p>
 
       <p reveal="0.6">The piece that your project needs,</p>
@@ -56,17 +55,18 @@
 
     <div class="block">
       <p reveal="0.7">Behind a succesful meme coin there's a consolidated community that lives off</p>
-      <p reveal="0.8"><span> trust and resilience</span>.</p>
+      <p reveal="0.8"><span class="g-text"> trust and resilience</span>.</p>
     </div>
 
     <div class="block">
       <p reveal="0.9">More essential than that,</p>
       <p reveal="1">there's a dev, a leader,</p>
-      <p reveal="1.1">cooking the details <span>with love</span>.</p>
+      <p reveal="1.1">cooking the details <span class="g-text">with love</span>.</p>
     </div>
 
     <div class="block">
-      <h1 reveal="1.2">A showy website <span>can make the difference</span>.</h1>
+      <h1 reveal="1.2">A showy website <span class="g-text">can make the difference</span>.</h1>
+      <br />
       <p reveal="1.3">Jeff can help with that!</p>
     </div>
   </div>

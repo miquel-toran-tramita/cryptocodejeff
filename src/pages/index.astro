@@ -1,0 +1,17 @@
+---
+import Hero from '@/components/jeff/hero.svelte'
+import Layout from '@/layouts/Layout.astro'
+---
+
+<style lang="scss"></style>
+
+<Layout title="Crypto Code Jeff">
+  <Hero client:load />
+
+  <div style="height: 200vh"></div>
+  <script>
+    import { animReveal } from '@/utils/reveal'
+
+    window.onload = () => animReveal()
+  </script>
+</Layout>

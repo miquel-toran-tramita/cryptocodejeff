@@ -1,7 +1,7 @@
 {
   "workbench.colorCustomizations": {
-    "statusBar.background": "#ea00ff3a",
-    "statusBar.foreground": "#b800be"
+    "statusBar.background": "#00ff403a",
+    "statusBar.foreground": "#00cf00"
   },
   "editor.formatOnSave": true,
   "[svelte]": {
